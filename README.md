@@ -26,7 +26,7 @@ https://ourworldindata.org/faq-on-plastics
 
 ### **Finding Data:**
 
-#### Climate change: _Earth Surface Temperature Database_
+##### Climate change: _Earth Surface Temperature Database_
 - https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data#GlobalLandTemperaturesByCountry.csv
 - All of the raw data came from the Berkeley Earth data page. They collected the data by analyzing global climate models and generated raw data from their findings.
 - Rows: 577462
@@ -35,7 +35,7 @@ https://ourworldindata.org/faq-on-plastics
   - Which part of the world is being affected by global warming the most?
     - The question can be answered by comparing the surface temperature across different countries within the data set.
 
-#### What a Global Waste Database
+##### What a Global Waste Database
 - https://datacatalog.worldbank.org/dataset/what-waste-global-database
 - The dataset is collected by the What a Waste global project about waste management across the globe, which includes composition, collection, disposal, waste generation, information on user information, legal information and more. The collection methods include current literature and conversations with waste agencies.
 - Rows: 218
@@ -47,7 +47,7 @@ https://ourworldindata.org/faq-on-plastics
     - This question can be answered by what indicators (transportation, emission, agriculture…) contribute the most to global warming across different countries and see what is the most common indicator out of all the factors.
 
 
-#### Climate Action Tracker Database
+##### Climate Action Tracker Database
 - https://climateactiontracker.org/data-portal/
 - The data is collected by two organizations, Climate Analytics and the New Climate Institute. This data tracks government climate action and measures it against the aim of the Paris Agreement. The raw data set includes data from a multitude of  countries on the effects a factor has on the change in climate.
 - Rows: 37626
