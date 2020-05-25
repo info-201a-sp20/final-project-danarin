@@ -1,0 +1,7 @@
+library(dplyr)
+library(lintr)
+library(styler)
+library(stringr)
+library(ggplot2)
+library(leaflet)
+library(knitr)
