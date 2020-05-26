@@ -31,7 +31,7 @@ This map helps answer which part of the world is being affected by global warmin
 plot
 ```
 
-This bar chart helps answer which has contributes the most to global warming, and will continue to do so in the future. The data in the chart represents the average value of contribution to climate global warming for each contry. The total value accounts for oil and gas production,...
+This bar chart helps answer which has contributes the most to global warming, and will continue to do so in the future. The data in the chart represents the average value of contribution to climate global warming for each country. The total value accounts for oil and gas production,...
 
 ## Chart 3
 
