@@ -1,9 +1,5 @@
 library(dplyr)
-library(lintr)
-library(styler)
-library(stringr)
 library(ggplot2)
-library(leaflet)
 library(readxl)
 library(xlsx)
 
@@ -17,5 +13,7 @@ library(xlsx)
 cat_df <- read_excel("../data/CAT-Decarbonisation-Indicators.AllData.260919.xlsx",
                      sheet = "RawData")
 
-# currently working to remove the na values from the dataframe, but am 
-# having trouble.
+# omitting the na values, gets rid of all of my data for some reason
+cat_df <- na.omit(cat_df)
+
+
