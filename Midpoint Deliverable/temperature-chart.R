@@ -1,6 +1,6 @@
 library(dplyr)
 library(ggplot2)
-require(maps)
+library(maps)
 
 # Create a data frame for the data to work with
 temperature_df <- read.csv("../data/GlobalLandTemperaturesByCountry.csv",
