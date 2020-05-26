@@ -7,14 +7,16 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(maps)
 source("temperature-chart.R")
 source("CAT_data.R")
+source("summary_info.R")
 ```
 
 ## Introduction
 
 ## Summary Information
-
+In the Country Level Dataset, we are able to access data regarding the different types of waste and amounts of those wastes for every country. This data set accounts for a global population of `r world_pop`. Using this we calculated the total waste per person, which equaled `r avg_per_person`. On a larger scale, we calculated that there is an average of `r avg_total_waste` per country. When looking closer at the different types of waste created per country, we were able to calculate that there is an average of `r avg_agri_waste` of agricultural waste per country. Agriculture is such a large part of what goes into the make up of society around the globe. To better understand this data, with regards to location, we were able to determine the average total waste per person in the United States. This ended up being `r avg_per_person_us` per person. 
 ## Summary Table
 
 ## Change in Temperature Map
