@@ -1,7 +1,7 @@
 library(dplyr)
 
 # Summary Info
-country_data <- read.csv("data/country_level_data_0.csv",
+country_data <- read.csv("../data/country_level_data_0.csv",
                          stringsAsFactors = FALSE)
 
 # population total globe
