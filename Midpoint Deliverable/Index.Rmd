@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 source("temperature-chart.R")
 source("CAT_data.R")
 source("summary_info.R")
+source("chart_3.R")
 ```
 
 ## Introduction
@@ -20,17 +21,19 @@ In the Country Level Dataset, we are able to access data regarding the different
 ## Summary Table
 
 ## Change in Temperature Map
+This map helps answer which part of the world is being affected by global warming the most. The change in temperature was measured by the earliest date and latest date recorded with their corresponding average temperature. By subtracting the two, we can see the change in temperature over the years. The higher the change, the more affected by global warming a country is. This map is a good way to visualize it because we can clearly see, by the colors, which country is most affected and in what way. Based on this map, we can conclude that Russia is the country that is most affected by global warming. We can also see that Russia's temperature change is extremely positive, which means the country's surface temperature increased drastically over the years. There were also countries that actually had a negative temperature change, which means they actually got colder over the years, and based on the map, it seems that the countries closer to the south had a decrease in surface temperature.
 ```{r map, echo=FALSE}
 map
 ```
 
-This map helps answer which part of the world is being affected by global warming the most. The change in temperature was measured by the earliest date and latest date recorded with their corresponding average temperature. By subtracting the two, we can see the change in temperature over the years. The higher the change, the more affected by global warming a country is. This map is a good way to visualize it because we can clearly see, by the colors, which country is most affected and in what way. Based on this map, we can conclude that Russia is the country that is most affected by global warming. We can also see that Russia's temperature change is extremely positive, which means the country's surface temperature increased drastically over the years. There were also countries that actually had a negative temperature change, which means they actually got colder over the years, and based on the map, it seems that the countries closer to the south had a decrease in surface temperature.
-
 ## Climate Action Tracker (CAT) bar chart
+This bar chart helps answer which has contributes the most to global warming, and will continue to do so in the future. The data in the chart represents the average value of contribution to climate global warming for each country. The total value accounts for oil and gas production,...
 ```{r plot, echo=FALSE}
 plot
 ```
 
-This bar chart helps answer which has contributes the most to global warming, and will continue to do so in the future. The data in the chart represents the average value of contribution to climate global warming for each country. The total value accounts for oil and gas production,...
-
-## Chart 3
+## Correlation between waste recycling rate and global warming
+We are interested in whether particularly how has the waste factor contribute to global warming. We hypothesize that the higher the recycled waste will correlate *negatively* with the change in temperature. This scatter plot shows the correlation between the average percent recycled waste vs average temperature change in a small set of countries in Europe. As the regression line has shown, the higher the percent recycled waste is *positively* correlate to the land temperature change. This is not what we expected and this could due the sample size is too small to make a good projection.
+```{r correlation, echo=FALSE}
+correlation_plot
+```
