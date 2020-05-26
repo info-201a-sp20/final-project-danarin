@@ -7,17 +7,25 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("temperature-chart.R")
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Summary Information
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Summary Table
 
-```{r cars}
-summary(cars)
+## Change in Temperature Map
+```{r map, echo=FALSE}
+map
 ```
+
+This map helps answer which part of the world is being affected by global warming the most. The change in temperature was measured by the earliest date and latest date recorded with their corresponding average temperature. By subtracting the two, we can see the change in temperature over the years. The higher the change, the more affected by global warming a country is. This map is a good way to visualize it because we can clearly see, by the colors, which country is most affected and in what way. Based on this map, we can conclude that Russia is the country that is most affected by global warming. We can also see that Russia's temperature change is extremely positive, which means the country's surface temperature increased drastically over the years. There were also countries that actually had a negative temperature change, which means they actually got colder over the years, and based on the map, it seems that the countries closer to the south had a decrease in surface temperature.
+
+## Chart 2
+
+## Chart 3
 
 ## Including Plots
 
