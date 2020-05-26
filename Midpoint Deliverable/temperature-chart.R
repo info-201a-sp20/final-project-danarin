@@ -2,11 +2,15 @@ library(dplyr)
 library(ggplot2)
 require(maps)
 
+# Create a data frame for the data to work with
 temperature_df <- read.csv("../data/GlobalLandTemperaturesByCountry.csv",
                            stringsAsFactors = FALSE)
 
+# Omit the NA values
 temperature_df <- na.omit(temperature_df)
 
+# Create a new data frame with the change in temperature analysis for
+# each country
 analysis <- temperature_df %>%
   group_by(Country) %>%
   filter(dt %in% range(dt, na.rm = TRUE)) %>%
@@ -21,6 +25,7 @@ analysis <- temperature_df %>%
                     "Democratic Republic of the Congo", region)
   )
 
+# Create a map to represent the change in temperature in each country
 world_map <- map_data("world")
 
 change_temp_map <- left_join(analysis, world_map, by = "region")
@@ -32,6 +37,7 @@ map <- ggplot(
   expand_limits(x = change_temp_map$long, y = change_temp_map$lat) +
   scale_fill_viridis_c(option = "C")
 
+# Adjust the labels for the map
 map <- map + labs(
   title = "Change in Temperature in Countries",
   x = "",
