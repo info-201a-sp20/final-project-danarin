@@ -10,7 +10,7 @@ world_pop <- country_data %>%
   pull(total_pop)
 
 # industrial waste / total waste
-industry_waste_percent <- country_data %>%
+industry_waste <- country_data %>%
   summarize(ind_waste_per_total = (sum(special_waste_industrial_waste_tons_year,
                                        na.rm = TRUE) /
                                      sum(
