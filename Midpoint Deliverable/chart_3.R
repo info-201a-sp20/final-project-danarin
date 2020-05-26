@@ -53,7 +53,7 @@ df <- left_join(recycle, temp_data_round) %>%
   drop_na()
 
 
-#plot by ggplot
+#Plot
 plot_ly(data = df, x = ~avg_percent_recycled, y = ~temp_change,
         type = "scatter", mode = "markers")
 
