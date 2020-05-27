@@ -5,14 +5,14 @@ library(readxl)
 # This is the Climate Action Tracker (CAT) file
 # Used to calculate average waste generation per capita
 
-# Question of interest: Which country has generated the most waste, 
+# Question of interest: Which country has generated the most waste,
 # contributing the most to climate change in terms of waste generation?
 
 # Get dataframe
-cat_df <- read_excel("../data/CAT-Decarbonisation-Indicators.AllData.260919.xlsx",
-                     sheet = "RawData")
+cat_df <- read_excel(paste0("../data/CAT-Decarbonisation-Indicators.",
+                            "AllData.260919.xlsx"),sheet = "RawData")
 
-# Create a new data frame grouping by country, filtering by waste, and 
+# Create a new data frame grouping by country, filtering by waste, and
 # taking average of generated waste per country
 updated_df <- cat_df %>%
   select(Indicator, Country, Value) %>%
