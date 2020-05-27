@@ -10,12 +10,13 @@ library(readxl)
 # data, so you can stay in this file's directory when working in it.
 
 # Get dataframe
-cat_df <- read_excel("../data/CAT-Decarbonisation-Indicators.AllData.260919.xlsx",
+cat_df <- read_excel(paste0("../data/CAT-Decarbonisation-Indicators.",
+                            "AllData.260919.xlsx"),
                      sheet = "RawData")
 
 # Create a new dataframe grouping by indicators
 updated_df <- cat_df %>%
-  select(Indicator, Country, Value) %>% 
+  select(Indicator, Country, Value) %>%
   filter(Indicator == "Waste generation (per capita)") %>%
   group_by(Country) %>%
   summarize(
@@ -23,5 +24,8 @@ updated_df <- cat_df %>%
   )
 
 # Making dataframe into a bar chart
-p <- ggplot(updated_df, mapping = aes(fill = Country, x = Country, y = Average_Waste_Generation)) + geom_bar(position = "stack", stat = "identity")
+p <- ggplot(updated_df, mapping = aes(fill = Country, x = Country,
+                                      y = Average_Waste_Generation)) +
+  geom_bar(position = "stack", stat = "identity")
+
 p
