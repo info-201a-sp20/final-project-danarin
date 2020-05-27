@@ -27,4 +27,5 @@ p <- p + geom_text(aes(label = round(Average_Waste_Generation, digits = 2)),
                    vjust = -0.5, position = position_dodge(0.9), size = 2.75) 
 p <- p +  geom_bar(position = "stack",
                    stat = "identity")
-p <- p + ylab("Average Waste Generation (Per Capita)") 
+p <- p + ggtitle("Average Waste Generation Within Countries")
+p <- p + ylab("Avg Waste Generation (Per Capita)") 
