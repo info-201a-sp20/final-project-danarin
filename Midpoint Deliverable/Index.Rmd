@@ -11,13 +11,15 @@ source("temperature-chart.R")
 source("CAT_data.R")
 source("summary_info.R")
 source("chart_3.R")
+source("summary_table.R")
 ```
 
 ## Introduction
 Climate change is a really relevant topic today and is a problem that needs to be solved. It’s also a global crisis that a lot of countries are facing. It is important to understand what are the factors that are contributing to global warming, as well as its impact on the world. This document summarizes how countries are impacted by climate change. We are specifically interested in how the factor of waste production contributes to global warming in differnt countries. To help global warming, recycling plays a big role in reducing the waste. Therefore, in this document, we also examine to correlation of recycling rate and global warming in a set of countries. 
 
 ## Summary Information
-In the Country Level Dataset, we are able to access data regarding the different types of waste and amounts of those wastes for every country. 
+In the Country Level Dataset, we are able to access data regarding the different types of waste and amounts of those wastes for every country.
+
 1. This data set accounts for a global population of `r world_pop`.   
 2. Using this we calculated the total waste per person, which equaled `r avg_per_person`.  
 3. On a larger scale, we calculated that there is an average of `r avg_total_waste` per country.  
@@ -25,6 +27,9 @@ In the Country Level Dataset, we are able to access data regarding the different
 5. Agriculture is such a large part of what goes into the make up of society around the globe. To better understand this data, with regards to location, we were able to determine the average total waste per person in the United States. This ended up being `r avg_per_person_us` per person.
 
 ## Summary Table
+```{r table, echo=FALSE}
+temp_change_table
+```
 
 ## Change in Temperature Map
 **Which part of the world is being affected by global warming the most?**  
