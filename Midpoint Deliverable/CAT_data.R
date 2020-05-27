@@ -10,7 +10,7 @@ library(readxl)
 
 # Get dataframe
 cat_df <- read_excel(paste0("../data/CAT-Decarbonisation-Indicators.",
-                            "AllData.260919.xlsx"),sheet = "RawData")
+                            "AllData.260919.xlsx"), sheet = "RawData")
 
 # Create a new data frame grouping by country, filtering by waste, and
 # taking average of generated waste per country
