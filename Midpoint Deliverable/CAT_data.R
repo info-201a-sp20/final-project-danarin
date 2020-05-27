@@ -1,7 +1,6 @@
 library(dplyr)
 library(ggplot2)
 library(readxl)
-library(leaflet)
 
 
 
@@ -16,14 +15,13 @@ cat_df <- read_excel("../data/CAT-Decarbonisation-Indicators.AllData.260919.xlsx
 
 # Create a new dataframe grouping by indicators
 updated_df <- cat_df %>%
+  select(Indicator, Country, Value) %>% 
+  filter(Indicator == "Waste generation (per capita)") %>%
   group_by(Country) %>%
   summarize(
-    Total_Value = mean(Value)
+    Average_Waste_Generation = mean(Value)
   )
 
 # Making dataframe into a bar chart
-plot <- barplot(updated_df$Total_Value, ylim = c(0, 5000),
-                main = "Country vs. Climate Change Contribution",
-                xlab = "Country Name",
-                ylab = "CC Contribution"
-               )
+p <- ggplot(updated_df, mapping = aes(fill = Country, x = Country, y = Average_Waste_Generation)) + geom_bar(position = "stack", stat = "identity")
+p
