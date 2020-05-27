@@ -14,6 +14,7 @@ source("chart_3.R")
 ```
 
 ## Introduction
+Climate change is a really relevant topic today and is a problem that needs to be solved. It’s also a global crisis that a lot of countries are facing. It is important to understand what are the factors that are contributing to global warming, as well as its impact on the world. This document summarizes how countries are impacted by climate change and how countries contribute to climate change. 
 
 ## Summary Information
 In the Country Level Dataset, we are able to access data regarding the different types of waste and amounts of those wastes for every country. This data set accounts for a global population of `r world_pop`. Using this we calculated the total waste per person, which equaled `r avg_per_person`. On a larger scale, we calculated that there is an average of `r avg_total_waste` per country. When looking closer at the different types of waste created per country, we were able to calculate that there is an average of `r avg_agri_waste` of agricultural waste per country. Agriculture is such a large part of what goes into the make up of society around the globe. To better understand this data, with regards to location, we were able to determine the average total waste per person in the United States. This ended up being `r avg_per_person_us` per person.
@@ -26,8 +27,9 @@ This map helps answer which part of the world is being affected by global warmin
 map
 ```
 
-## Global Waste Generation
+## Global Waste Generation Chart
 This bar chart helps answer which country has contributed most to climate change through waste generation (per capita). Each bar represents the average amount of waste a person generates within a country. As you can see, not all countries are listed on the chart because the average values of waste generation are combined with others within the same region, like Europe, for instance. Waste generation, in terms of climate change, is not good for the environment. Waste generation, releases a greenhouse gas that contributes to climate change. Therefore, the more waste being generated within a country/region, the more that country contributes to climate change. By looking at this bar chart, you are able to compare the difference between the average waste generated between countries when referring to the numbers above each bar. You are also able to easily see which contries generated the most and least waste. To answer the question by looking at the chart, the United States has contributed the most to waste generation (0.74) and Indonesia has contribued the least (0.05). 
+
 ```{r plot, echo=FALSE}
 p
 ```
