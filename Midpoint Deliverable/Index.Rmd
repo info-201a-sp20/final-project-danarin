@@ -15,18 +15,19 @@ source("summary_table.R")
 ```
 
 ## Introduction
-Climate change is a really relevant topic today and is a problem that needs to be solved. It’s also a global crisis that a lot of countries are facing. It is important to understand what are the factors that are contributing to global warming, as well as its impact on the world. This document summarizes how countries are impacted by climate change. We are specifically interested in how the factor of waste production contributes to global warming in differnt countries. To help global warming, recycling plays a big role in reducing the waste. Therefore, in this document, we also examine to correlation of recycling rate and global warming in a set of countries. 
+Climate change is a really relevant topic today and is a problem that needs to be solved. It’s also a global crisis that a lot of countries are facing. It is important to understand what factors are contributing to global warming, as well as its impact on the world. This document summarizes how countries are impacted by climate change. We are specifically interested in how the factor of waste production contributes to global warming in differnt countries. To help global warming, recycling plays a big role in reducing waste. Therefore, in this document, we also examine the correlation of recycling rate as well as waste generation and global warming within a set of countries. 
 
 ## Summary Information
-In the Country Level Dataset, we are able to access data regarding the different types of waste and amounts of those wastes for every country.
+In the Country Level Dataset, we are able to access data regarding the different types and amounts of waste for every country.
 
 1. This data set accounts for a global population of `r world_pop`.   
-2. Using this we calculated the total waste per person, which equaled `r avg_per_person`.  
+2. Using this, we calculated the total waste per person, which equaled `r avg_per_person`.  
 3. On a larger scale, we calculated that there is an average of `r avg_total_waste` per country.  
 4. When looking closer at the different types of waste created per country, we were able to calculate that there is an average of `r avg_agri_waste` of agricultural waste per country.  
 5. Agriculture is such a large part of what goes into the make up of society around the globe. To better understand this data, with regards to location, we were able to determine the average total waste per person in the United States. This ended up being `r avg_per_person_us` per person.
 
 ## Summary Table
+This summary table summarizes the change in temperature in different countries. To make this summary, we used an original data set that recorded each country's temperature at two different years. We then aggregated this data by grouping it by country, and got the change in temperature value by subtracting the average temperatures of each year. We also ordered the table in descending order, having the country with the largest change in temperature at the top, to the country with the lowest change at the bottom.
 ```{r table, echo=FALSE}
 temp_change_table
 ```
