@@ -3,7 +3,8 @@ library(knitr)
 
 # Create a data frame for the data to work with
 temperature_df <- read.csv("../data/GlobalLandTemperaturesByCountry.csv",
-                           stringsAsFactors = FALSE)
+                           stringsAsFactors = FALSE
+)
 
 # Omit the NA values
 temperature_df <- na.omit(temperature_df)
@@ -25,6 +26,7 @@ analysis <- temperature_df %>%
                     "Democratic Republic of the Congo", region)
   )
 
+# Create a table of the analysis
 temp_change_table <- knitr::kable(
   analysis,
   col.names = names(analysis),
