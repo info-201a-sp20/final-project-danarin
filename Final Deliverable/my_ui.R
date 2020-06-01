@@ -32,7 +32,7 @@ temperature_tab <- tabPanel(
         celsius). Hover over a country on the map to see the exact change
         in temperature.")
     ),
-    
+
     mainPanel(
       plotlyOutput(
         outputId = "temperature_map",
