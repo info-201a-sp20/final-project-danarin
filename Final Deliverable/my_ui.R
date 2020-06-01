@@ -13,11 +13,10 @@ ui <- fluidPage(
 
 temperature_tab <- tabPanel(
   "Temperature Change Map",
-  fluid = TRUE,
   sidebarLayout(
     sidebarPanel(
       h3("TEMPERATURE CHANGE BY YEAR"),
-      h4("QUESTIONS"),
+      h4("QUESTION"),
       p("- Which part of the world is being affected by global
         warming the most?"),
       sliderInput(
