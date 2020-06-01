@@ -1,4 +1,5 @@
 library(shiny)
+library(plotly)
 
 ui <- fluidPage(
   titlePanel(""),
@@ -34,7 +35,8 @@ temperature_tab <- tabPanel(
         affected by global warming the most. Select a year to view how each
         country's average temperature changed throughout the year (in
         celsius). Hover over a country on the map to see the exact change
-        in temperature.")
+        in temperature. Some years do not have recorded temperatures, thus
+        some years will not have data to view.")
     ),
 
     mainPanel(
