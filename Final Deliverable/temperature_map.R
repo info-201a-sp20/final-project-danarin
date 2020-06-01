@@ -1,8 +1,7 @@
-library(dplyr)
-library(ggplot2)
-library(maps)
-library(rgdal)
+library(plotly)
 source("../Midpoint Deliverable/temperature-chart.R")
+
+geography_df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv")
 
 temperature_df <- temperature_df[-3]
 
