@@ -3,11 +3,11 @@ library(shiny)
 ui <- fluidPage(
   titlePanel(""),
   tabsetPanel(
-    # Intro tab
-    temperature_tab
-    # chart 2 tab
-    # chart 3 tab
-    # summary tab
+    # Intro tab,
+    temperature_tab,
+    # chart 2 tab,
+    # chart 3 tab,
+    summary_tab
   )
 )
 
@@ -39,6 +39,24 @@ temperature_tab <- tabPanel(
         height = 600,
         width = 900
       )
+    )
+  )
+)
+
+summary_tab <- tabPanel(
+  "Summary",
+  sidebarLayout(
+    sidebarPanel(
+      h3("CONCLUSIONS"),
+      p("")
+    ),
+    
+    # feel free to change the image here lol
+    mainPanel(
+      img(src = paste0(
+        "https://img.favpng.com/4/25/8/global-warming-royalty-free-climate",
+        "-change-illustration-png-favpng-Y9NHT4QsJU2J2KXYqPLa9RAny.jpg"),
+          width = "95%", height = "95%")
     )
   )
 )
