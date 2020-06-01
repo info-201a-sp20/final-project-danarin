@@ -16,8 +16,10 @@ temperature_tab <- tabPanel(
   fluid = TRUE,
   sidebarLayout(
     sidebarPanel(
-      h4("TEMPERATURE CHANGE BY YEAR"),
-      p(""),
+      h3("TEMPERATURE CHANGE BY YEAR"),
+      h4("QUESTIONS"),
+      p("- Which part of the world is being affected by global
+        warming the most?"),
       sliderInput(
         inputId = "year",
         label = "Year",
@@ -25,11 +27,11 @@ temperature_tab <- tabPanel(
         max = 2013,
         value = 1878
       ),
-      h4("QUESTIONS"),
-      p("- Which part of the world is being affected by global
-        warming the most?"),
-      h4("RESULTS"),
-      p("")
+      p("This map is used to see which country in the world is being
+        affected by global warming the most. Select a year to view how each
+        country's average temperature changed throughout the year (in
+        celsius). Hover over a country on the map to see the exact change
+        in temperature.")
     ),
     
     mainPanel(
