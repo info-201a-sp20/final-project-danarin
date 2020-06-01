@@ -23,9 +23,9 @@ build_map <- function(year_choice) {
     select(Country, change_in_temp) %>%
     rename(region = Country, Change_in_Temperature = change_in_temp) %>%
     mutate(
-      region = ifelse(region == "United States", "USA", region),
-      region = ifelse(region == "Congo (Democratic Republic Of The)",
-                      "Democratic Republic of the Congo", region)
+      region = ifelse(region == "USA", "United States", region),
+      region = ifelse(region == "Democratic Republic of the Congo",
+                      "Congo (Democratic Republic of the)", region)
     )
   
   rename_df <- geography_df %>%
@@ -42,5 +42,3 @@ build_map <- function(year_choice) {
   
   return(create_map)
 }
-
-
