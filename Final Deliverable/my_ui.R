@@ -3,7 +3,7 @@ library(shiny)
 ui <- fluidPage(
   titlePanel(""),
   tabsetPanel(
-    # Intro tab,
+    intro_tab,
     temperature_tab,
     # chart 2 tab,
     # chart 3 tab,
