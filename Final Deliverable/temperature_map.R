@@ -39,7 +39,7 @@ build_map <- function(year_choice) {
     rename(region = COUNTRY)
 
   joined_df <- left_join(calculation, rename_df, by = "region")
-
+  
   temperature_map <- plot_ly(
     joined_df,
     type = "choropleth",
