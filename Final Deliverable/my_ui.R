@@ -11,6 +11,10 @@ ui <- fluidPage(
   )
 )
 
+intro_tab <- tabPanel(
+  "Introduction"
+)
+
 temperature_tab <- tabPanel(
   "Temperature Change Map",
   sidebarLayout(
