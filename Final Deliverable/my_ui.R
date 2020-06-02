@@ -116,7 +116,7 @@ recycle_tab <- tabPanel(
       select_country <- selectInput(
         "recycle_country",
         label = "Choose a country",
-        choices = unique(df$Country),
+        choices = unique(recycle$Country),
         selected = "Austria"
       ),
       p("Please select a country to see the comparison 
