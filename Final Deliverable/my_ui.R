@@ -128,6 +128,7 @@ recycle_tab <- tabPanel(
   )
 )
 
+
 summary_tab <- tabPanel(
   "Summary",
   sidebarLayout(
