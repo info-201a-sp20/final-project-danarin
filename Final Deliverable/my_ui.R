@@ -6,7 +6,7 @@ ui <- fluidPage(
   tabsetPanel(
     intro_tab,
     temperature_tab,
-    # chart 2 tab,
+    cat_chart,
     # chart 3 tab,
     summary_tab
   )
@@ -47,6 +47,10 @@ temperature_tab <- tabPanel(
       )
     )
   )
+)
+
+cat_chart <- tabPanel(
+  "Climate Action Tracker"
 )
 
 summary_tab <- tabPanel(
