@@ -99,14 +99,22 @@ global_waste <- tabPanel(
     sidebarPanel(
       h3("GLOBAL WASTE GENERATION BY YEAR"),
       h4("QUESTION"),
-      p("Which country has contributed most to climate
+      p("- Which country has contributed most to climate
       change through waste generation (per capita)?"),
+      p("Select a year to find out which country has contributed the
+        most waste."),
       selectInput("year",
         label = ("Select a year"),
-        c(1990:2030)
+        c(1990:2030),
+        selected = "Average of all years"
       ),
-      p("Select a year to see the average global waste generation
-        per capita..."),
+      p("Each bar represents the average amount of waste a person
+        generates within a country. As you will see, some countries aren't
+        listed because there wasn't any data for that corresponding year. In
+        some cases, not all countries will be listed because the average values 
+        of waste generation are combined with others within the same region, like 
+        Europe, for instance."),
+      
     ),
     mainPanel(
       plotOutput("bar_chart")
@@ -119,9 +127,9 @@ recycle_chart <- tabPanel(
   "Recycle waste vs Total waste",
   sidebarLayout(
     sidebarPanel(
-      h3("Recycled Waste vs Total Waste"),
+      h3("RECYCLED WASTE vs TOTAL WASTE"),
       h4("QUESTION"),
-      p("What is the recycled waste versus total waste
+      p("- What is the recycled waste versus total waste
         in different countries? By looking at the comparison,
         it is clear that only how much waste has been recycled
         in different country. Please refer to the map to see
@@ -141,6 +149,7 @@ recycle_chart <- tabPanel(
   )
 )
 
+# Summary tab
 summary_page <- tabPanel(
   "Summary",
   sidebarLayout(
@@ -162,6 +171,7 @@ summary_page <- tabPanel(
   )
 )
 
+# UI
 ui <- fluidPage(
   tags$div(class = "header"),
 
