@@ -1,5 +1,6 @@
 library(shiny)
 library(plotly)
+library(ggplot2)
 
 ui <- fluidPage(
   titlePanel(""),
@@ -8,7 +9,8 @@ ui <- fluidPage(
     temperature_tab,
     cat_chart,
     # chart 3 tab,
-    summary_tab
+    summary_tab,
+    recycle_page
   )
 )
 
@@ -82,3 +84,39 @@ summary_tab <- tabPanel(
     )
   )
 )
+
+
+#Recycle page 
+recycle_page <- tabPanel(
+  "Recycle waste vs Total waste",
+  titlePanel(
+    "Recycle Rate vs Total waste in Different Countries"
+  ),
+  p("This is an interactive bar graph that can show the average total
+    waste and average total recycled waste throughout the years 
+    in different countries. Please select a country of interest."),
+  sidebarLayout(
+    sidebarPanel(
+      h3("Recycled Waste vs Total Waste"),
+      h4("QUESTION"),
+      p("What is the recycled waste versus total waste 
+        in different countries? By looking at the comparison,
+        it is clear that only how much waste has been recycled
+        in different country. Please refer to the map to see
+        the effect global warming in the selected country"),
+      select_country <- selectInput(
+        "recycle_country",
+        label = "Choose a country",
+        choices = unique(df$Country),
+        selected = "Austria"
+      ),
+      p("Please select a country to see the comparison 
+        between recycled waste and the total waste")
+    ),
+    mainPanel(
+      plotlyOutput("percent_recycle")
+    )
+  )
+)
+
+

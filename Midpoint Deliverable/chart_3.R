@@ -66,7 +66,7 @@ correlation_plot <- plot_ly(data = df, x = ~avg_percent_recycled) %>%
             type = "scatter",
             name = "Regression Line") %>%
   layout(title = paste("Average Percent Recycled Waste <br> v.s",
-         "Average Land Temperature Change"),
+                       "Average Land Temperature Change"),
          xaxis = list(title = "Average Percent Recycled Waste <br> (%)"),
          yaxis = list(title = "Average Land Temperature Change <br> (Celsius)"),
          margin = list(t = 75))
