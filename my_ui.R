@@ -8,14 +8,13 @@ introduction <- tabPanel(
   h1("Climate Change", align = "center"),
   h4("As defined by NASA,", strong("climate change"), "is 'any long-term
          change in Earth's climate, or in the climate of a region or city."),
-  img(src = paste0("https://media.greenmatters.com/brand-img/",
-                       "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg")),
   p("Climate change affects everyone because it affects the world we live in.
         Climate change is caused by human activities, such as the emissions of
         greenhouse gases like carbon dioxide, deforestation, and land-use
         change. It disrupts all aspects of society including human health,
         agriculture, transportation, energy, ecosystems, etc."),
-  img(src = "https://www.cbsnews.com/pictures/stunning-photos-of-climate-change/47/"),
+  img(src = paste0("https://media.greenmatters.com/brand-img/",
+                   "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg")),
   p("Right now global climate change
         has caused the loss of sea ice, leading to a rise in sea level,
         and more intense heat waves across the globe. The Intergovernmental
@@ -32,7 +31,7 @@ introduction <- tabPanel(
   h3("Major Questions We Are Trying to Answer"),
   p("1. Which part of the world is being affected by global warming the most?"),
   p("2. Which country has contributed most to climate change through waste
-        generation (per capita)?"),
+        generation (per capita) in a given year?"),
   p("3. What is the correlation between recycled waste and total waste in
         different countries?"),
   h3("Datasets Used"),
