@@ -26,7 +26,3 @@ recycle <- waste_data %>%
     avg_recycled = mean(recycled_waste),
     avg_waste = mean(total_waste)
   )
-
-#Combine datasets
-df <- left_join(recycle, temp_data_round) %>%
-  drop_na()

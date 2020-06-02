@@ -14,8 +14,8 @@ server <- function(input, output, session) {
   
   #Recycle page 
   output$percent_recycle <- renderPlotly({
-    filtered = df[df$Country == input$recycle_country, c("avg_recycled",
-                                                         "avg_waste")]
+    filtered = recycle[recycle$Country == input$recycle_country, c("avg_recycled",
+                                                                   "avg_waste")]
     filtered <- gather(filtered, "country", "value")
     plot_ly(data = filtered,
             x = ~country,
