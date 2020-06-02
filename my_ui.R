@@ -124,7 +124,7 @@ global_waste <- tabPanel(
 
 # Recycle waste vs total tab
 recycle_chart <- tabPanel(
-  "Recycle waste vs Total waste",
+  "Recycle Waste vs Total waste",
   sidebarLayout(
     sidebarPanel(
       h3("RECYCLED WASTE vs TOTAL WASTE"),

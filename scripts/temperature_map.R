@@ -55,7 +55,10 @@ build_map <- function(year_choice) {
     z = joined_df$Change_in_Temperature,
     text = joined_df$region,
     colorscale = "BLUES"
-  )
+  ) %>%
+    colorbar(
+      title = "Change in Temperature (Celsius)"
+    )
 
   return(temperature_map)
 }
