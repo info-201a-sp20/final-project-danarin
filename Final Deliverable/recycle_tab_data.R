@@ -1,3 +1,5 @@
+library(tidyr)
+
 #data processing for chart_3.R file
 waste_data <- read.csv("../data/waste_generation_and_treatment(env_wasgt).csv",
                        header = TRUE, stringsAsFactors = FALSE)

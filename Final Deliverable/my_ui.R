@@ -85,8 +85,8 @@ temperature_tab <- tabPanel(
 
 cat_chart <- tabPanel(
   "Global Waste Generation",
-  sidebarPanel(
-    sidebarLayout(
+  sidebarLayout(
+    sidebarPanel(
     h3("GLOBAL WASTE GENERATION BY YEAR"),
     h4("QUESTION"),
     p("Which country has contributed most to climate 
