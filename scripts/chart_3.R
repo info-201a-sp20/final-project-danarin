@@ -4,11 +4,9 @@ library(tidyr)
 library(ggplot2)
 library(stringr)
 library(plotly)
-library(styler)
-library(lintr)
 
 #Total waste production in from 2004-2016
-waste_data <- read.csv("../data/waste_generation_and_treatment(env_wasgt).csv",
+waste_data <- read.csv("data/waste_generation_and_treatment(env_wasgt).csv",
                        header = TRUE, stringsAsFactors = FALSE)
 
 waste_data <- waste_data %>%
@@ -39,7 +37,7 @@ recycle <- waste_data %>%
   select(Country, avg_percent_recycled)
 
 #Global warming indicator: average tempt change by country
-temp_data <- read.csv("../data/temperautre.csv",
+temp_data <- read.csv("data/temperautre.csv",
                       header = TRUE, stringsAsFactors = FALSE)
 
 temp_data_round <- temp_data %>%

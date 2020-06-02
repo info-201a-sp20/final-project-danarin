@@ -12,7 +12,7 @@ waste_data <- waste_data %>%
   select(TIME, Country, WST_OPER, Waste, UNIT)
 
 # Calculate average recycling rate across 2004-2016
-recycle <- waste_data %>%
+avg_recycle_waste <- waste_data %>%
   filter(WST_OPER == "Waste treatment" |
     WST_OPER == "Recovery - recycling and backfilling (R2-R11)" &
       Waste != ":") %>%

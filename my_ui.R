@@ -134,7 +134,7 @@ recycle_chart <- tabPanel(
       select_country <- selectInput(
         "recycle_country",
         label = "Choose a country",
-        choices = unique(recycle$Country),
+        choices = unique(avg_recycle_waste$Country),
         selected = "Austria"
       ),
       p("Please select a country to see the comparison
@@ -149,24 +149,20 @@ recycle_chart <- tabPanel(
 # Summary tab
 summary_page <- tabPanel(
   "Summary",
-  sidebarLayout(
-    sidebarPanel(
-      h3("CONCLUSIONS"),
-      p("")
-    ),
-
-    # feel free to change the image here lol
-    mainPanel(
-      img(
-        src = paste0(
-          "https://img.favpng.com/4/25/8/global-warming-royalty-free-climate",
-          "-change-illustration-png-favpng-Y9NHT4QsJU2J2KXYqPLa9RAny.jpg"
-        ),
-        width = "95%", height = "95%"
-      )
-    )
-  )
+  h1("CONCLUSIONS"),
+  h3("Major takeaway 3: Recycled Rate vs Temperature change"),
+  p("As this correlation graph has shown, the higher the recycle rate 
+    surprsingly resulted in higher temperature change throughout the years
+    using a small sample in the European countries. This is different
+    from what we expected, and the reasons might due to incomplete of the
+    datasets and limited number of the sample size. In addition, 
+    the temperature of Earth can be rising by other factors than waste
+    production and therefore scew the data. However, we still strongly 
+    encourage recyling the waste, because other studies have shown that
+    recycling the waste can help global warming and climate change"),
+   plotlyOutput("correlation_plot")
 )
+
 
 # UI
 ui <- fluidPage(

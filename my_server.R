@@ -2,6 +2,8 @@ library(shiny)
 source("scripts/temperature_map.R")
 source("scripts/CAT_chart.R")
 source("scripts/recycle_tab_data.R")
+source("scripts/chart_3.R")
+
 
 # Server funcion
 server <- function(input, output, session) {
@@ -13,7 +15,7 @@ server <- function(input, output, session) {
 
   # Recycle page
   output$percent_recycle <- renderPlotly({
-    filtered <- recycle[recycle$Country == input$recycle_country, c(
+    filtered <- avg_recycle_waste[avg_recycle_waste$Country == input$recycle_country, c(
       "avg_recycled",
       "avg_waste"
     )]
@@ -30,5 +32,10 @@ server <- function(input, output, session) {
         yaxis = list(title = "Amount of waste (tonne)"),
         margin = list(t = 75)
       )
+  })
+  
+  #Summary page for recycle page
+  output$correlation_plot <- renderPlotly({
+    correlation_plot
   })
 }
