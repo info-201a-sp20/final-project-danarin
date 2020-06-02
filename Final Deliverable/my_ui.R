@@ -51,6 +51,14 @@ temperature_tab <- tabPanel(
 
 cat_chart <- tabPanel(
   "Climate Action Tracker",
+  sidebarPanel(
+    h3("GLOBAL WASTE GENERATION BY YEAR"),
+    h4("QUESTION"),
+    p("Which country has contributed most to climate 
+      change through waste generation (per capita)?"),
+  ),
+  selectInput("year", label = h3("Select a year"),
+              c(1990:2050)),
   mainPanel(
     plotOutput(
       outputId = "bar_chart"
