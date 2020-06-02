@@ -8,7 +8,7 @@ introduction <- tabPanel(
   h1("Climate Change", align = "center"),
   h4("As defined by NASA,", strong("climate change"), "is 'any long-term
          change in Earth's climate, or in the climate of a region or city."),
-  img(src = "climate_change.PNG"),
+  img(src = "imgs/climate_change.PNG"),
   p("Climate change affects everyone because it affects the world we live in.
         Climate change is caused by human activities, such as the emissions of
         greenhouse gases like carbon dioxide, deforestation, and land-use
@@ -111,10 +111,10 @@ global_waste <- tabPanel(
       p("Each bar represents the average amount of waste a person
         generates within a country. As you will see, some countries aren't
         listed because there wasn't any data for that corresponding year. In
-        some cases, not all countries will be listed because the average values 
-        of waste generation are combined with others within the same region, like 
-        Europe, for instance."),
-      
+        some cases, not all countries will be listed because the average values
+        of waste generation are combined with others within the same region,
+        like Europe, for instance."),
+
     ),
     mainPanel(
       plotOutput("bar_chart")

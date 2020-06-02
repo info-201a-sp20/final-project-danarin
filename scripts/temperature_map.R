@@ -1,13 +1,23 @@
 library(plotly)
-source("../Midpoint Deliverable/temperature-chart.R")
+
+temperature_df <- read.csv(paste0(
+  "../final-project-danarin/data",
+  "/GlobalLandTemperaturesByCountry.csv"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Omit the NA values
+temperature_df <- na.omit(temperature_df)
 
 geography_df <- read.csv(
   paste0(
     "https://raw.githubusercontent.com/plotly",
     "/datasets/master",
     "/2014_world_gdp_with_codes.csv"
-    ),
-  stringsAsFactors = FALSE)
+  ),
+  stringsAsFactors = FALSE
+)
 
 geography_df <- geography_df[-2]
 
@@ -39,7 +49,7 @@ build_map <- function(year_choice) {
     rename(region = COUNTRY)
 
   joined_df <- left_join(calculation, rename_df, by = "region")
-  
+
   temperature_map <- plot_ly(
     joined_df,
     type = "choropleth",

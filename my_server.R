@@ -1,7 +1,7 @@
 library(shiny)
-source("temperature_map.R")
-source("CAT_chart.R")
-source("recycle_tab_data.R")
+source("scripts/temperature_map.R")
+source("scripts/CAT_chart.R")
+source("scripts/recycle_tab_data.R")
 
 # Server funcion
 server <- function(input, output, session) {
