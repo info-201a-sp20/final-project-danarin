@@ -7,7 +7,6 @@ ui <- fluidPage(
     intro_tab,
     temperature_tab,
     cat_chart,
-    # chart 3 tab,
     recycle_tab,
     summary_tab
   )
@@ -85,19 +84,21 @@ temperature_tab <- tabPanel(
 )
 
 cat_chart <- tabPanel(
-  "Climate Action Tracker",
+  "Global Waste Generation",
   sidebarPanel(
+    sidebarLayout(
     h3("GLOBAL WASTE GENERATION BY YEAR"),
     h4("QUESTION"),
     p("Which country has contributed most to climate 
       change through waste generation (per capita)?"),
-    selectInput("year", label = h3("Select a year"),
+    selectInput("year", label = ("Select a year"),
                 c(1990:2050)),
     p("Select a year to see the average global waste generation per capita..."),
   ),
   mainPanel(
     plotOutput("bar_chart")
   )
+)
 )
 
 #Recycle page 
