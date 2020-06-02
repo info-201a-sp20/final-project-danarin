@@ -56,9 +56,10 @@ cat_chart <- tabPanel(
     h4("QUESTION"),
     p("Which country has contributed most to climate 
       change through waste generation (per capita)?"),
+    selectInput("year", label = h3("Select a year"),
+                c(1990:2050)),
+    p("Select a year to see the average global waste generation per capita..."),
   ),
-  selectInput("year", label = h3("Select a year"),
-              c(1990:2050)),
   mainPanel(
     plotOutput(
       outputId = "bar_chart"
