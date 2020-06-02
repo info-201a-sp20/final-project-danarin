@@ -70,9 +70,9 @@ temperature_map <- tabPanel(
       sliderInput(
         inputId = "year_choice",
         label = "Year",
-        min = 1743,
+        min = 1750,
         max = 2013,
-        value = 1878
+        value = 1880
       ),
       p("This map is used to see which country in the world is being
         affected by global warming the most. Select a year to view how each

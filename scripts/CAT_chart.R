@@ -1,11 +1,8 @@
 library(plotly)
 library(readxl)
 
-cat_df <- read_excel(paste0(
-  "../final-project-danarin/data",
-  "/CAT-Decarbonisation-Indicators.",
-  "AllData.260919.xlsx"
-), sheet = "RawData")
+cat_df <- read_excel("data/CAT-Decarbonisation-Indicators.AllData.260919.xlsx",
+                     sheet = "RawData")
 
 cat_df <- cat_df %>%
   select(Indicator, Country, Year, Value) %>%

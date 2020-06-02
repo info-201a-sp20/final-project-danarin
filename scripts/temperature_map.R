@@ -1,9 +1,7 @@
 library(plotly)
+library(dplyr)
 
-temperature_df <- read.csv(paste0(
-  "../final-project-danarin/data",
-  "/GlobalLandTemperaturesByCountry.csv"
-  ),
+temperature_df <- read.csv("data/GlobalLandTemperaturesByCountry.csv",
   stringsAsFactors = FALSE
 )
 
