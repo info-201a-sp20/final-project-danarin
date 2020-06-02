@@ -7,6 +7,6 @@ server <- function(input, output, session) {
   output$temperature_map <- renderPlotly(build_map(input$year))
   
   # Climate Action Tracker Map
-  output$CAT_chart <- renderPlot(bar_chart(input$year))
+  output$bar_chart <- renderPlot(bar_chart(input$year))
 }
 

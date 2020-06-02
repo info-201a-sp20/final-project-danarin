@@ -61,9 +61,7 @@ cat_chart <- tabPanel(
     p("Select a year to see the average global waste generation per capita..."),
   ),
   mainPanel(
-    plotOutput(
-      outputId = "bar_chart"
-    )
+    plotOutput("bar_chart")
   )
 )
 
