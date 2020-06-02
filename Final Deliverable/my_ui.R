@@ -8,8 +8,8 @@ ui <- fluidPage(
     temperature_tab,
     cat_chart,
     # chart 3 tab,
-    summary_tab,
-    recycle_tab
+    recycle_tab,
+    summary_tab
   )
 )
 
@@ -103,12 +103,6 @@ cat_chart <- tabPanel(
 #Recycle page 
 recycle_tab <- tabPanel(
   "Recycle waste vs Total waste",
-  titlePanel(
-    "Recycle Rate vs Total waste in Different Countries"
-  ),
-  p("This is an interactive bar graph that can show the average total
-    waste and average total recycled waste throughout the years 
-    in different countries. Please select a country of interest."),
   sidebarLayout(
     sidebarPanel(
       h3("Recycled Waste vs Total Waste"),
