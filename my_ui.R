@@ -8,6 +8,8 @@ introduction <- tabPanel(
   h1("Climate Change", align = "center"),
   h4("As defined by NASA,", strong("climate change"), "is 'any long-term
          change in Earth's climate, or in the climate of a region or city."),
+  img(src = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
+                   "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp")),
   p("Climate change affects everyone because it affects the world we live in.
         Climate change is caused by human activities, such as the emissions of
         greenhouse gases like carbon dioxide, deforestation, and land-use
@@ -28,6 +30,9 @@ introduction <- tabPanel(
         effects caused by climate change, such as more frequent wildfires,
         longer periods of droughts, increased duration and intensity of
         tropical storms, etc."),
+  img(src = paste0("https://static01.nyt.com/images/2019/12/02/",
+                   "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+                   "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp")),
   h3("Major Questions We Are Trying to Answer"),
   p("1. Which part of the world is being affected by global warming the most?"),
   p("2. Which country has contributed most to climate change through waste
@@ -36,22 +41,22 @@ introduction <- tabPanel(
         different countries?"),
   h3("Datasets Used"),
   p(a("Climate Action Tracker",
-    href = "https://climateactiontracker.org/data-portal/"
+      href = "https://climateactiontracker.org/data-portal/"
   )),
   p(a("Global Land Temp by Country",
-    href = paste0(
-      "https://www.kaggle.com/berkeleyearth/",
-      "climate-change-earth-surface-temperature-data"
-    )
+      href = paste0(
+        "https://www.kaggle.com/berkeleyearth/",
+        "climate-change-earth-surface-temperature-data"
+      )
   )),
   p(a("Country Level Data",
-    href = paste0(
-      "https://datacatalog.worldbank.org/dataset/",
-      "what-waste-global-database"
-    )
+      href = paste0(
+        "https://datacatalog.worldbank.org/dataset/",
+        "what-waste-global-database"
+      )
   )),
   p(a("Waste Generation and Treatment",
-    href = "https://sensoneo.com/sensoneo-global-waste-index-2019/"
+      href = "https://sensoneo.com/sensoneo-global-waste-index-2019/"
   ))
 )
 
@@ -160,9 +165,44 @@ summary_page <- tabPanel(
     production and therefore scew the data. However, we still strongly 
     encourage recyling the waste, because other studies have shown that
     recycling the waste can help global warming and climate change"),
-   plotlyOutput("correlation_plot")
+  plotlyOutput("correlation_plot")
 )
 
+# Sources tab
+sources_tab <- tabPanel(
+  "Sources",
+  h2("Information", align = "center"),
+  p(a("\"The Effects of Climate Change\" - NASA",
+      href = "https://climate.nasa.gov/effects/")),
+  p(a("\"Understand Climate Change\" - GlobalChange.gov",
+      href = "https://www.globalchange.gov/climate-change")),
+  p(a("\"What Are Climate and Climate Change?\" - NASA",
+      href = paste0("https://www.nasa.gov/audience/forstudents/5-8/",
+                    "features/nasa-knows/what-is-climate-change-58.html"))),
+  p(a("\"Climate Change 2013: The Physical Science Basis\" - IPCC",
+      href = "https://www.ipcc.ch/report/ar5/wg1/")),
+  h2("Photos", align = "center"),
+  p(a("\"Cave Fire in Santa Barbara, Calif\" - David Mcnew/Reuters", 
+      href = paste0("https://static01.nyt.com/images/2019/12/02/",
+                    "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+                    "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))),
+  p(a("\"Flooding in Mogadishu, Somalia, in October\" - Feisal Omar/Reuters", 
+      href = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
+                    "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"))),
+  p(a("\"Polar Bear and Iceberg Photo\" - Istock", 
+      href = paste0("https://media.greenmatters.com/brand-img/ZochFRvBX/",
+                    "1024x537/causes-of-global-warming-1579628524578.jpg")))
+)
+
+# About Us tab
+about_tab <- tabPanel(
+  "About Us",
+  h1("Group Members", align = "center"),
+  h3("Dana Rin"),
+  h3("Jenny Dao"),
+  h3("Stephanie"),
+  h3("Janet Pan")
+)
 
 # UI
 ui <- fluidPage(
@@ -176,6 +216,8 @@ ui <- fluidPage(
     temperature_map,
     global_waste,
     recycle_chart,
-    summary_page
+    summary_page,
+    sources_tab,
+    about_tab
   )
 )
