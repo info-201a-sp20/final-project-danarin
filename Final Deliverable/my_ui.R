@@ -121,7 +121,7 @@ recycle_tab <- tabPanel(
         it is clear that only how much waste has been recycled
         in different country. Please refer to the map to see
         the effect global warming in the selected country"),
-      select_country <- selectInput(
+      selectInput(
         "recycle_country",
         label = "Choose a country",
         choices = unique(recycle$Country),

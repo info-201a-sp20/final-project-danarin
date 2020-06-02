@@ -3,7 +3,6 @@ source("temperature_map.R")
 source("CAT_chart.R")
 source("recycle_tab_data.R")
 
-
 # Server funcion
 server <- function(input, output, session) {
   # Temperature Change Map
