@@ -1,17 +1,6 @@
 library(shiny)
 library(plotly)
 
-ui <- fluidPage(
-  titlePanel("Climate Change and Global Warming"),
-  tabsetPanel(
-    intro_tab,
-    temperature_tab,
-    cat_chart,
-    recycle_tab,
-    summary_tab
-  )
-)
-
 intro_tab <- tabPanel(
   "Introduction",
   h1("Climate Change", align = "center"),
@@ -166,5 +155,16 @@ summary_tab <- tabPanel(
         width = "95%", height = "95%"
       )
     )
+  )
+)
+
+ui <- fluidPage(
+  titlePanel("Climate Change and Global Warming"),
+  tabsetPanel(
+    intro_tab,
+    temperature_tab,
+    cat_chart,
+    recycle_tab,
+    summary_tab
   )
 )
