@@ -13,7 +13,41 @@ ui <- fluidPage(
 )
 
 intro_tab <- tabPanel(
-  "Introduction"
+  "Introduction",
+  h1("Climate Change"),
+  h2("As defined by NASA,", strong("climate change"), "is 'any long-term change 
+    in Earth's climate, or in the climate of a region or city'."),
+  img("", src = "https://www.cbsnews.com/pictures/stunning-photos-of-climate-change/7/"),
+  p("Climate change affects everyone because it affects the world we live in. 
+    Climate change is caused by human activities, such as the emissions of 
+    greenhouse gases like carbon dioxide, deforestation, and land-use change. 
+    It disrupts all aspects of society including human health, agriculture, 
+    transportation, energy, ecosystems, etc."),
+  img("", src = "https://www.cbsnews.com/pictures/stunning-photos-of-climate-change/48/"),
+  p("Right now global climate change 
+    has caused the loss of sea ice, leading to a rise in sea level, 
+    and more intense heat waves across the globe. The Intergovernmental 
+    Panel on Climate Change, or the IPCC, release reports explaining the 
+    extent of climate change effects on various regions across the globe. 
+    The trend in increased global temperature is seen with a very high 
+    certainty to be caused by human forcing, the main aspect being carbon 
+    dioxide emissions. While other natural factors are analyzed, these 
+    trends are too small to explain the trend in global temperature. Without 
+    a change, the Earth will continue to warm increasing global effects caused 
+    by climate change, such as more frequent wildfires, longer periods of 
+    droughts, increased duration and intensity of tropical storms, etc."), 
+  h2("Major Questions We Are Trying to Answer"),
+  p("1. Which part of the world is being affected by global warming the most?
+    2. Which country has contributed most to climate change through waste 
+    generation (per capita)?
+    3. What is the correlation between recycled waste and total waste in 
+    different countries?"),
+  h2("Datasets Used"),
+  h3("Climate Action Tracker", href = "https://climateactiontracker.org/data-portal/"),
+  h3("Global Land Temp by Country",
+     href = "https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data"),
+  h3("Country Level Data", href = "https://datacatalog.worldbank.org/dataset/what-waste-global-database"),
+  h3("Waste Generation and Treatment", href = "https://sensoneo.com/sensoneo-global-waste-index-2019/")
 )
 
 temperature_tab <- tabPanel(
