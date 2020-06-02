@@ -50,7 +50,12 @@ temperature_tab <- tabPanel(
 )
 
 cat_chart <- tabPanel(
-  "Climate Action Tracker"
+  "Climate Action Tracker",
+  mainPanel(
+    plotOutput(
+      outputId = "bar_chart"
+    )
+  )
 )
 
 summary_tab <- tabPanel(
