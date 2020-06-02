@@ -7,7 +7,7 @@ source("recycle_tab_data.R")
 #Server funcion
 server <- function(input, output, session) {
   # Temperature Change Map
-  output$temperature_map <- renderPlotly(build_map(input$year))
+  output$temperature_map <- renderPlotly(build_map(input$year_choice))
   
   # Climate Action Tracker Map
   output$bar_chart <- renderPlot(bar_chart(input$year))

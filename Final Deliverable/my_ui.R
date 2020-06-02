@@ -2,7 +2,7 @@ library(shiny)
 library(plotly)
 
 ui <- fluidPage(
-  titlePanel(""),
+  titlePanel("Climate Change and Global Warming"),
   tabsetPanel(
     intro_tab,
     temperature_tab,
@@ -58,7 +58,7 @@ temperature_tab <- tabPanel(
       p("- Which part of the world is being affected by global
         warming the most?"),
       sliderInput(
-        inputId = "year",
+        inputId = "year_choice",
         label = "Year",
         min = 1743,
         max = 2013,
