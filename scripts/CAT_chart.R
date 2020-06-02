@@ -1,4 +1,5 @@
 library(plotly)
+library(readxl)
 
 cat_df <- read_excel(paste0(
   "../final-project-danarin/data",
