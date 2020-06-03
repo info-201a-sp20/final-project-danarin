@@ -170,6 +170,8 @@ recycle_chart <- tabPanel(
 summary_page <- tabPanel(
   "Summary",
   h1("CONCLUSIONS"),
+  h3("Major takeaway 1: Temperature Change Map"),
+  p("Summary..."),
   h3("Major takeaway 2: Global Waste Generation"),
   p("This chart represents the global waste generation of each country of
     the years given in the data set (1990-2030). Like the other bar chart,

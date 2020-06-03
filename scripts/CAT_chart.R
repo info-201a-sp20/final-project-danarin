@@ -20,9 +20,6 @@ bar_chart <- function(year) {
       x = Country,
       y = Value
   ))
-  b_plot <- b_plot + geom_text(aes(label = round(Value, digits = 2)),
-    vjust = -0.5, position = position_dodge(0.9), size = 2.75
-  )
   b_plot <- b_plot + geom_bar(
     position = "stack",
     stat = "identity"
