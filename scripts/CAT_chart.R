@@ -13,9 +13,12 @@ bar_chart <- function(year) {
   select_year <- cat_df %>%
     filter(Year == year)
 
-  b_plot <- ggplot(select_year, mapping = aes(
-    fill = Country, x = Country,
-    y = Value
+  b_plot <- ggplot(
+    select_year, 
+    mapping = aes(
+      fill = Country,
+      x = Country,
+      y = Value
   ))
   b_plot <- b_plot + geom_text(aes(label = round(Value, digits = 2)),
     vjust = -0.5, position = position_dodge(0.9), size = 2.75
@@ -26,5 +29,5 @@ bar_chart <- function(year) {
   )
   b_plot <- b_plot + ggtitle(paste("Average Waste Generation Within Countries in", year))
   b_plot <- b_plot + ylab("Avg Waste Generation (Per Capita)")
-  return(p)
+  return(b_plot)
 }
