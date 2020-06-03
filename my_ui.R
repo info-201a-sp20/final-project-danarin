@@ -215,10 +215,10 @@ about_tab <- tabPanel(
     of climate change on the world, as well as the factors that contribute
     to this global crisis.",
     align = "center"),
-  h3("Dana Rin"),
   h3("Jenny Dao"),
-  h3("Stephanie"),
-  h3("Janet Pan")
+  h3("Stephanie Nguyen"),
+  h3("Janet Pan"),
+  h3("Dana Rin"),
 )
 
 # UI
