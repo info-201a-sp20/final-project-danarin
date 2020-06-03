@@ -5,6 +5,7 @@ library(ggplot2)
 library(stringr)
 library(plotly)
 
+
 #Total waste production in from 2004-2016
 waste_data <- read.csv("../final-project-danarin/data/waste_generation_and_treatment(env_wasgt).csv",
                        header = TRUE, stringsAsFactors = FALSE)
@@ -43,8 +44,7 @@ temp_data <- read.csv("data/temperautre.csv",
 temp_data_round <- temp_data %>%
   mutate(temp_change = substr(temp_data$Warming.since.1960, 1,
                               nchar(temp_data$Warming.since.1960) - 7)) %>%
-  mutate(Country = `ï..Country`) %>%
-  select(-Warming.since.1960, -`ï..Country`)
+  select(-Warming.since.1960)
 
 #Combine datasets
 df <- left_join(recycle, temp_data_round) %>%
