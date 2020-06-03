@@ -173,7 +173,7 @@ summary_page <- tabPanel(
     countries when referring to the numbers above each bar. Of the countries,
     the United States has contributed the most to waste generation (0.74) and
     Indonesia has contribued the least (0.05)."),
-  plotlyOutput("plot"),
+  plotlyOutput("p"),
   h3("Major takeaway 3: Recycled Rate vs Temperature change"),
   p("As this correlation graph has shown, the higher the recycle rate 
     surprsingly resulted in higher temperature change throughout the years
