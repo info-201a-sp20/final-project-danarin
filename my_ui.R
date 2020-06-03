@@ -207,6 +207,14 @@ sources_tab <- tabPanel(
 about_tab <- tabPanel(
   "About Us",
   h1("Group Members", align = "center"),
+  p("We are a group of students from the University of Washington
+    taking INFO 201 (Technical Foundation of Informatics). We decided
+    to touch on the topic of climate change and global warming because
+    it is an issue that continues to grow. With this project, we hope to
+    educate people about the past, current, and potential future impacts
+    of climate change on the world, as well as the factors that contribute
+    to this global crisis.",
+    align = "center"),
   h3("Dana Rin"),
   h3("Jenny Dao"),
   h3("Stephanie"),
