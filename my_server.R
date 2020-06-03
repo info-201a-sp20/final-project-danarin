@@ -17,7 +17,8 @@ server <- function(input, output, session) {
 
   # Recycle page
   output$percent_recycle <- renderPlotly({
-    filtered <- avg_recycle_waste[avg_recycle_waste$Country == input$recycle_country, c(
+    filtered <- avg_recycle_waste[avg_recycle_waste$Country ==
+      input$recycle_country, c(
       "avg_recycled",
       "avg_waste"
     )]
@@ -35,13 +36,13 @@ server <- function(input, output, session) {
         margin = list(t = 75)
       )
   })
-  
+
   # Summary page for temperature map
   output$map <- renderPlot(map)
-  
+
   # Summary page for waste generation
   output$p <- renderPlotly(p)
-  
+
   # Summary page for recycle page
   output$correlation_graph <- renderPlotly(correlation_plot)
 }

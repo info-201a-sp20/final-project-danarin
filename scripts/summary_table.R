@@ -2,8 +2,9 @@ library(dplyr)
 library(knitr)
 
 # Create a data frame for the data to work with
-temperature_df <- read.csv("../final-project-danarin/data/GlobalLandTemperaturesByCountry.csv",
-                           stringsAsFactors = FALSE
+temperature_df <- read.csv(
+  "../final-project-danarin/data/GlobalLandTemperaturesByCountry.csv",
+  stringsAsFactors = FALSE
 )
 
 # Omit the NA values
@@ -23,7 +24,8 @@ analysis <- temperature_df %>%
   mutate(
     region = ifelse(region == "United States", "USA", region),
     region = ifelse(region == "Congo (Democratic Republic Of The)",
-                    "Democratic Republic of the Congo", region)
+      "Democratic Republic of the Congo", region
+    )
   )
 
 # Create a table of the analysis

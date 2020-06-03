@@ -6,18 +6,23 @@ library(shinythemes)
 introduction <- tabPanel(
   "Introduction",
   h1("Climate Change", align = "center"),
-  div(class="intro",
+  div(
+    class = "intro",
     h4("As defined by NASA,", strong("climate change"), "is 'any long-term
            change in Earth's climate, or in the climate of a region or city."),
-    img(src = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
-                     "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp")),
+    img(src = paste0(
+      "https://static01.nyt.com/images/2019/12/02/climate/",
+      "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"
+    )),
     p("Climate change affects everyone because it affects the world we live in.
           Climate change is caused by human activities, such as the emissions of
           greenhouse gases like carbon dioxide, deforestation, and land-use
           change. It disrupts all aspects of society including human health,
           agriculture, transportation, energy, ecosystems, etc."),
-    img(src = paste0("https://media.greenmatters.com/brand-img/",
-                     "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg")),
+    img(src = paste0(
+      "https://media.greenmatters.com/brand-img/",
+      "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg"
+    )),
     p("Right now global climate change
           has caused the loss of sea ice, leading to a rise in sea level,
           and more intense heat waves across the globe. The Intergovernmental
@@ -26,43 +31,49 @@ introduction <- tabPanel(
           The trend in increased global temperature is seen with a very high
           certainty to be caused by human forcing, the main aspect being carbon
           dioxide emissions. While other natural factors are analyzed, these
-          trends are too small to explain the trend in global temperature. Without
-          a change, the Earth will continue to warm increasing global
+          trends are too small to explain the trend in global temperature.
+          Without a change, the Earth will continue to warm increasing global
           effects caused by climate change, such as more frequent wildfires,
           longer periods of droughts, increased duration and intensity of
           tropical storms, etc."),
-    img(src = paste0("https://static01.nyt.com/images/2019/12/02/",
-                     "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
-                     "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))
+    img(src = paste0(
+      "https://static01.nyt.com/images/2019/12/02/",
+      "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+      "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"
+    ))
   ),
-  div(class="intro_major",
+  div(
+    class = "intro_major",
     h3("Major Questions We Are Trying to Answer"),
-    p("1. Which part of the world is being affected by global warming the most?"),
+    p("1. Which part of the world is being affected by global warming
+      the most?"),
     p("2. Which country has contributed most to climate change through waste
           generation (per capita) in a given year?"),
     p("3. What is the correlation between recycled waste and total waste in
           different countries?")
   ),
-  div(class="intro_dataset",
-  h3("Datasets Used"),
-  p(a("Climate Action Tracker",
+  div(
+    class = "intro_dataset",
+    h3("Datasets Used"),
+    p(a("Climate Action Tracker",
       href = "https://climateactiontracker.org/data-portal/"
-  )),
-  p(a("Global Land Temp by Country",
+    )),
+    p(a("Global Land Temp by Country",
       href = paste0(
         "https://www.kaggle.com/berkeleyearth/",
         "climate-change-earth-surface-temperature-data"
       )
-  )),
-  p(a("Country Level Data",
+    )),
+    p(a("Country Level Data",
       href = paste0(
         "https://datacatalog.worldbank.org/dataset/",
         "what-waste-global-database"
       )
-  )),
-  p(a("Waste Generation and Treatment",
+    )),
+    p(a("Waste Generation and Treatment",
       href = "https://sensoneo.com/sensoneo-global-waste-index-2019/"
-  )))
+    ))
+  )
 )
 
 # Temperature change map tab
@@ -74,6 +85,8 @@ temperature_map <- tabPanel(
       h4("QUESTION"),
       p("- Which part of the world is being affected by global
         warming the most?"),
+      p("Select a year to see how each country is affected throughout
+        that year."),
       sliderInput(
         inputId = "year_choice",
         label = "Year",
@@ -91,9 +104,7 @@ temperature_map <- tabPanel(
 
     mainPanel(
       plotlyOutput(
-        outputId = "temperature_map",
-        height = 600,
-        width = 900
+        outputId = "temperature_map"
       )
     )
   )
@@ -121,11 +132,9 @@ global_waste <- tabPanel(
         some cases, not all countries will be listed because the average values
         of waste generation are combined with others within the same region,
         like Europe, for instance."),
-
     ),
     mainPanel(
       plotlyOutput("bar_chart"),
-        
     )
   )
 )
@@ -177,19 +186,19 @@ summary_page <- tabPanel(
   p("This chart represents the global waste generation of each country of
     the years given in the data set (1990-2030). Like the other bar chart,
     each bar represents the average waste. By looking at this bar chart, you
-    are able to compare the difference between the average waste generated between 
-    countries when referring to the numbers above each bar. Of the countries,
-    the United States has contributed the most to waste generation (0.74) and
-    Indonesia has contribued the least (0.05)."),
+    are able to compare the difference between the average waste generated
+    between countries when referring to the numbers above each bar. Of the
+    countries, the United States has contributed the most to waste
+    generation (0.74) and Indonesia has contribued the least (0.05)."),
   plotlyOutput("p"),
   h3("Major takeaway 3: Recycled Rate vs Temperature change"),
-  p("As this correlation graph has shown, the higher the recycle rate 
+  p("As this correlation graph has shown, the higher the recycle rate
     surprsingly resulted in higher temperature change throughout the years
     using a small sample in the European countries. This is different
     from what we expected, and the reasons might due to incomplete of the
-    datasets and limited number of the sample size. In addition, 
+    datasets and limited number of the sample size. In addition,
     the temperature of Earth can be rising by other factors than waste
-    production and therefore scew the data. However, we still strongly 
+    production and therefore scew the data. However, we still strongly
     encourage recyling the waste, because other studies have shown that
     recycling the waste can help global warming and climate change"),
   plotlyOutput("correlation_graph")
@@ -199,29 +208,47 @@ summary_page <- tabPanel(
 sources_tab <- tabPanel(
   "Sources",
   h2("Information", align = "center"),
-  div(class="source_style",
+  div(
+    class = "source_style",
     p(a("\"The Effects of Climate Change\" - NASA",
-        href = "https://climate.nasa.gov/effects/")),
+      href = "https://climate.nasa.gov/effects/"
+    )),
     p(a("\"Understand Climate Change\" - GlobalChange.gov",
-        href = "https://www.globalchange.gov/climate-change")),
+      href = "https://www.globalchange.gov/climate-change"
+    )),
     p(a("\"What Are Climate and Climate Change?\" - NASA",
-        href = paste0("https://www.nasa.gov/audience/forstudents/5-8/",
-                      "features/nasa-knows/what-is-climate-change-58.html"))),
+      href = paste0(
+        "https://www.nasa.gov/audience/forstudents/5-8/",
+        "features/nasa-knows/what-is-climate-change-58.html"
+      )
+    )),
     p(a("\"Climate Change 2013: The Physical Science Basis\" - IPCC",
-        href = "https://www.ipcc.ch/report/ar5/wg1/"))
+      href = "https://www.ipcc.ch/report/ar5/wg1/"
+    ))
   ),
-  div(class="source_style",
+  div(
+    class = "source_style",
     h2("Photos", align = "center"),
-    p(a("\"Cave Fire in Santa Barbara, Calif\" - David Mcnew/Reuters", 
-        href = paste0("https://static01.nyt.com/images/2019/12/02/",
-                      "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
-                      "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))),
-    p(a("\"Flooding in Mogadishu, Somalia, in October\" - Feisal Omar/Reuters", 
-        href = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
-                      "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"))),
-    p(a("\"Polar Bear and Iceberg Photo\" - Istock", 
-        href = paste0("https://media.greenmatters.com/brand-img/ZochFRvBX/",
-                  "1024x537/causes-of-global-warming-1579628524578.jpg"))))
+    p(a("\"Cave Fire in Santa Barbara, Calif\" - David Mcnew/Reuters",
+      href = paste0(
+        "https://static01.nyt.com/images/2019/12/02/",
+        "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+        "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"
+      )
+    )),
+    p(a("\"Flooding in Mogadishu, Somalia, in October\" - Feisal Omar/Reuters",
+      href = paste0(
+        "https://static01.nyt.com/images/2019/12/02/climate/",
+        "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"
+      )
+    )),
+    p(a("\"Polar Bear and Iceberg Photo\" - Istock",
+      href = paste0(
+        "https://media.greenmatters.com/brand-img/ZochFRvBX/",
+        "1024x537/causes-of-global-warming-1579628524578.jpg"
+      )
+    ))
+  )
 )
 
 # About Us tab
@@ -235,12 +262,14 @@ about_tab <- tabPanel(
     educate people about the past, current, and potential future impacts
     of climate change on the world, as well as the factors that contribute
     to this global crisis.",
-    align = "center", class="about_text"),
-  div(class="about_members",
+    align = "center", class = "about_text"
+  ),
+  div(
+    class = "about_members",
     h3("Jenny Dao"),
     p("Sophomore, Intended HCDE"),
     h3("Stephanie Nguyen"),
-    p("Junior, Geography"),
+    p("Junior, Geography Data Science"),
     h3("Janet Pan"),
     p("Senior, Biochemistry"),
     h3("Dana Rin"),
