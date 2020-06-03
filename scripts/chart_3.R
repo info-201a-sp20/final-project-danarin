@@ -43,8 +43,8 @@ temp_data <- read.csv("data/temperautre.csv",
 temp_data_round <- temp_data %>%
   mutate(temp_change = substr(temp_data$Warming.since.1960, 1,
                               nchar(temp_data$Warming.since.1960) - 7)) %>%
-  mutate(Country = ï..Country) %>%
-  select(-Warming.since.1960, -ï..Country)
+  mutate(Country = `ï..Country`) %>%
+  select(-Warming.since.1960, -`ï..Country`)
 
 #Combine datasets
 df <- left_join(recycle, temp_data_round) %>%
