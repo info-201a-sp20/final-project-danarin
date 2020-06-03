@@ -125,16 +125,7 @@ global_waste <- tabPanel(
     ),
     mainPanel(
       plotOutput("bar_chart"),
-      p(""),
-      p("Waste generation, in terms of climate change, is not good for the
-        environment. Waste generation releases a greenhouse gas that contributes
-        to climate change. Therefore, the more waste being generated within a
-        country/region, the more that country contributes to climate change. By
-        looking at this bar chart, you are able to compare the difference between
-        the average waste generated between countries when referring to the numbers
-        above each bar. You are also able to easily see which contries generated
-        the most and least waste. "
-        )
+        
     )
   )
 )

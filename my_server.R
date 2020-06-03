@@ -1,5 +1,6 @@
 library(shiny)
 source("scripts/temperature_map.R")
+source("scripts/temperature-chart.R")
 source("scripts/CAT_chart.R")
 source("scripts/CAT_data.R")
 source("scripts/recycle_tab_data.R")
@@ -35,11 +36,13 @@ server <- function(input, output, session) {
       )
   })
   
+  # Summary page for temperature map
   output$map <- renderPlot(map)
   
+  # Summary page for waste generation
   output$p <- renderPlotly(p)
   
-  #Summary page for recycle page
+  # Summary page for recycle page
   output$correlation_graph <- renderPlotly({
     correlation_plot
   })
