@@ -201,7 +201,7 @@ summary_page <- tabPanel(
     production and therefore scew the data. However, we still strongly 
     encourage recyling the waste, because other studies have shown that
     recycling the waste can help global warming and climate change"),
-  plotlyOutput("correlation_plot")
+  plotlyOutput("correlation_graph")
 )
 
 # Sources tab
