@@ -6,7 +6,7 @@ source("scripts/CAT_data.R")
 source("scripts/recycle_tab_data.R")
 source("scripts/chart_3.R")
 
-  
+
 # Server funcion
 server <- function(input, output, session) {
   # Temperature Change Map
@@ -43,7 +43,5 @@ server <- function(input, output, session) {
   output$p <- renderPlotly(p)
   
   # Summary page for recycle page
-  output$correlation_graph <- renderPlotly({
-    correlation_plot
-  })
+  output$correlation_graph <- renderPlotly(correlation_plot)
 }
