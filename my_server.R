@@ -1,8 +1,8 @@
 library(shiny)
-source("scripts/temperature_map.R")
 source("scripts/temperature-chart.R")
-source("scripts/CAT_chart.R")
+source("scripts/temperature_map.R")
 source("scripts/CAT_data.R")
+source("scripts/CAT_chart.R")
 source("scripts/recycle_tab_data.R")
 source("scripts/chart_3.R")
 
@@ -13,7 +13,7 @@ server <- function(input, output, session) {
   output$temperature_map <- renderPlotly(build_map(input$year_choice))
 
   # Climate Action Tracker Map
-  output$bar_chart <- renderPlot(bar_chart(input$year))
+  output$bar_chart <- renderPlotly(bar_chart(input$year))
 
   # Recycle page
   output$percent_recycle <- renderPlotly({

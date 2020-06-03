@@ -124,7 +124,7 @@ global_waste <- tabPanel(
 
     ),
     mainPanel(
-      plotOutput("bar_chart"),
+      plotlyOutput("bar_chart"),
         
     )
   )
