@@ -35,6 +35,8 @@ server <- function(input, output, session) {
       )
   })
   
+  output$map <- renderPlot(map)
+  
   output$p <- renderPlotly(p)
   
   #Summary page for recycle page

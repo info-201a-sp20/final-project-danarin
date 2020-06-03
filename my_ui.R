@@ -171,7 +171,15 @@ summary_page <- tabPanel(
   "Summary",
   h1("CONCLUSIONS"),
   h3("Major takeaway 1: Temperature Change Map"),
-  p("Summary..."),
+  p("This map shows the global change in temperature. Based on this map,
+    we can conclude that Russia is the country that is most affected by
+    global warming. We can also see that Russia's temperature change is
+    extremely positive, which means the country's surface temperature
+    increased drastically over the years. There were also countries that
+    actually had a negative temperature change, which means they actually
+    got colder over the years, and based on the map, it seems that the
+    countries closer to the south had a decrease in surface temperature."),
+  plotOutput("map"),
   h3("Major takeaway 2: Global Waste Generation"),
   p("This chart represents the global waste generation of each country of
     the years given in the data set (1990-2030). Like the other bar chart,
