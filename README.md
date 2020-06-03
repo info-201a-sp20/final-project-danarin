@@ -1,4 +1,5 @@
 # Final Project
+[Midpoint Deliverable](https://info-201a-sp20.github.io/final-project-danarin/index.html)
 [Final Deliverable](https://soshiku.shinyapps.io/final_deliverable/ "Climate Change and Global Warming")
 
 ### **Domain of Interest:** _Climate Change_
