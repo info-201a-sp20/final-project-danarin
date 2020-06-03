@@ -6,39 +6,44 @@ library(shinythemes)
 introduction <- tabPanel(
   "Introduction",
   h1("Climate Change", align = "center"),
-  h4("As defined by NASA,", strong("climate change"), "is 'any long-term
-         change in Earth's climate, or in the climate of a region or city."),
-  img(src = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
-                   "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp")),
-  p("Climate change affects everyone because it affects the world we live in.
-        Climate change is caused by human activities, such as the emissions of
-        greenhouse gases like carbon dioxide, deforestation, and land-use
-        change. It disrupts all aspects of society including human health,
-        agriculture, transportation, energy, ecosystems, etc."),
-  img(src = paste0("https://media.greenmatters.com/brand-img/",
-                   "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg")),
-  p("Right now global climate change
-        has caused the loss of sea ice, leading to a rise in sea level,
-        and more intense heat waves across the globe. The Intergovernmental
-        Panel on Climate Change, or the IPCC, release reports explaining the
-        extent of climate change effects on various regions across the globe.
-        The trend in increased global temperature is seen with a very high
-        certainty to be caused by human forcing, the main aspect being carbon
-        dioxide emissions. While other natural factors are analyzed, these
-        trends are too small to explain the trend in global temperature. Without
-        a change, the Earth will continue to warm increasing global
-        effects caused by climate change, such as more frequent wildfires,
-        longer periods of droughts, increased duration and intensity of
-        tropical storms, etc."),
-  img(src = paste0("https://static01.nyt.com/images/2019/12/02/",
-                   "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
-                   "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp")),
-  h3("Major Questions We Are Trying to Answer"),
-  p("1. Which part of the world is being affected by global warming the most?"),
-  p("2. Which country has contributed most to climate change through waste
-        generation (per capita) in a given year?"),
-  p("3. What is the correlation between recycled waste and total waste in
-        different countries?"),
+  div(class="intro",
+    h4("As defined by NASA,", strong("climate change"), "is 'any long-term
+           change in Earth's climate, or in the climate of a region or city."),
+    img(src = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
+                     "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp")),
+    p("Climate change affects everyone because it affects the world we live in.
+          Climate change is caused by human activities, such as the emissions of
+          greenhouse gases like carbon dioxide, deforestation, and land-use
+          change. It disrupts all aspects of society including human health,
+          agriculture, transportation, energy, ecosystems, etc."),
+    img(src = paste0("https://media.greenmatters.com/brand-img/",
+                     "ZochFRvBX/1280x671/causes-of-global-warming-1579628524578.jpg")),
+    p("Right now global climate change
+          has caused the loss of sea ice, leading to a rise in sea level,
+          and more intense heat waves across the globe. The Intergovernmental
+          Panel on Climate Change, or the IPCC, release reports explaining the
+          extent of climate change effects on various regions across the globe.
+          The trend in increased global temperature is seen with a very high
+          certainty to be caused by human forcing, the main aspect being carbon
+          dioxide emissions. While other natural factors are analyzed, these
+          trends are too small to explain the trend in global temperature. Without
+          a change, the Earth will continue to warm increasing global
+          effects caused by climate change, such as more frequent wildfires,
+          longer periods of droughts, increased duration and intensity of
+          tropical storms, etc."),
+    img(src = paste0("https://static01.nyt.com/images/2019/12/02/",
+                     "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+                     "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))
+  ),
+  div(class="intro_major",
+    h3("Major Questions We Are Trying to Answer"),
+    p("1. Which part of the world is being affected by global warming the most?"),
+    p("2. Which country has contributed most to climate change through waste
+          generation (per capita) in a given year?"),
+    p("3. What is the correlation between recycled waste and total waste in
+          different countries?")
+  ),
+  div(class="intro_dataset",
   h3("Datasets Used"),
   p(a("Climate Action Tracker",
       href = "https://climateactiontracker.org/data-portal/"
@@ -57,7 +62,7 @@ introduction <- tabPanel(
   )),
   p(a("Waste Generation and Treatment",
       href = "https://sensoneo.com/sensoneo-global-waste-index-2019/"
-  ))
+  )))
 )
 
 # Temperature change map tab
@@ -191,26 +196,29 @@ summary_page <- tabPanel(
 sources_tab <- tabPanel(
   "Sources",
   h2("Information", align = "center"),
-  p(a("\"The Effects of Climate Change\" - NASA",
-      href = "https://climate.nasa.gov/effects/")),
-  p(a("\"Understand Climate Change\" - GlobalChange.gov",
-      href = "https://www.globalchange.gov/climate-change")),
-  p(a("\"What Are Climate and Climate Change?\" - NASA",
-      href = paste0("https://www.nasa.gov/audience/forstudents/5-8/",
-                    "features/nasa-knows/what-is-climate-change-58.html"))),
-  p(a("\"Climate Change 2013: The Physical Science Basis\" - IPCC",
-      href = "https://www.ipcc.ch/report/ar5/wg1/")),
-  h2("Photos", align = "center"),
-  p(a("\"Cave Fire in Santa Barbara, Calif\" - David Mcnew/Reuters", 
-      href = paste0("https://static01.nyt.com/images/2019/12/02/",
-                    "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
-                    "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))),
-  p(a("\"Flooding in Mogadishu, Somalia, in October\" - Feisal Omar/Reuters", 
-      href = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
-                    "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"))),
-  p(a("\"Polar Bear and Iceberg Photo\" - Istock", 
-      href = paste0("https://media.greenmatters.com/brand-img/ZochFRvBX/",
-                    "1024x537/causes-of-global-warming-1579628524578.jpg")))
+  div(class="source_style",
+    p(a("\"The Effects of Climate Change\" - NASA",
+        href = "https://climate.nasa.gov/effects/")),
+    p(a("\"Understand Climate Change\" - GlobalChange.gov",
+        href = "https://www.globalchange.gov/climate-change")),
+    p(a("\"What Are Climate and Climate Change?\" - NASA",
+        href = paste0("https://www.nasa.gov/audience/forstudents/5-8/",
+                      "features/nasa-knows/what-is-climate-change-58.html"))),
+    p(a("\"Climate Change 2013: The Physical Science Basis\" - IPCC",
+        href = "https://www.ipcc.ch/report/ar5/wg1/"))
+  ),
+  div(class="source_style",
+    h2("Photos", align = "center"),
+    p(a("\"Cave Fire in Santa Barbara, Calif\" - David Mcnew/Reuters", 
+        href = paste0("https://static01.nyt.com/images/2019/12/02/",
+                      "climate/00CLI-ACCELERATE1/merlin_165073290_2cc529a8-3a3e-",
+                      "42e1-ac9d-15f122d71082-jumbo.jpg?quality=90&auto=webp"))),
+    p(a("\"Flooding in Mogadishu, Somalia, in October\" - Feisal Omar/Reuters", 
+        href = paste0("https://static01.nyt.com/images/2019/12/02/climate/",
+                      "00CLI-ACCELERATE6/00CLI-ACCELERATE6-jumbo.jpg?quality=90&auto=webp"))),
+    p(a("\"Polar Bear and Iceberg Photo\" - Istock", 
+        href = paste0("https://media.greenmatters.com/brand-img/ZochFRvBX/",
+                  "1024x537/causes-of-global-warming-1579628524578.jpg"))))
 )
 
 # About Us tab
@@ -224,15 +232,18 @@ about_tab <- tabPanel(
     educate people about the past, current, and potential future impacts
     of climate change on the world, as well as the factors that contribute
     to this global crisis.",
-    align = "center"),
-  h3("Jenny Dao"),
-  h3("Stephanie Nguyen"),
-  h3("Janet Pan"),
-  h3("Dana Rin"),
+    align = "center", class="about_text"),
+  div(class="about_members",
+    h3("Jenny Dao"),
+    h3("Stephanie Nguyen"),
+    h3("Janet Pan"),
+    h3("Dana Rin")
+  ),
 )
 
 # UI
 ui <- fluidPage(
+  includeCSS("style.css"),
   tags$div(class = "header"),
 
   navbarPage(
