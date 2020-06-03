@@ -1,0 +1,88 @@
+.Janet{
+ color:pink; 
+}
+
+.temp_change_map
+{
+  background-color: lightblue;
+}
+
+.temp_change_map_h3
+{
+  color: azure;
+}
+
+.well
+{
+  background-color: lightblue;
+}
+
+.well h3
+{
+  color: azure;
+}
+
+.source_style
+{
+  text-align: center;
+}
+
+.about_text
+{
+  padding: 2% 10% 2% 10%
+}
+
+.about_members
+{
+  width: 100%;
+  text-align: center;
+}
+
+.intro
+{
+   text-align: center;
+}
+
+.intro p
+{
+  margin: 5%;
+  font-size: 1.25em;
+}
+
+.intro img
+{
+  width: 80%;
+}
+
+.intro h2
+{
+  margin: 2%;
+}
+
+.intro h4
+{
+  margin: 2%;
+}
+
+.intro_major
+{
+  text-align: center;
+  padding-top: 2%;
+}
+
+.intro_major h2
+{
+  font-size: 1.5em;
+}
+
+.intro_major p
+{
+  font-size: 1.4em;
+  font-weight: 200;
+}
+
+.intro_dataset
+{
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
