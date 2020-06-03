@@ -147,18 +147,20 @@ recycle_chart <- tabPanel(
       h3("RECYCLED WASTE vs TOTAL WASTE"),
       h4("QUESTION"),
       p("- What is the recycled waste versus total waste
-        in different countries? By looking at the comparison,
-        it is clear that only how much waste has been recycled
-        in different country. Please refer to the map to see
-        the effect global warming in the selected country"),
+        in different countries?"),
+      p("Please select a country to see the comparison
+        between recycled waste and the total waste"),
       select_country <- selectInput(
         "recycle_country",
         label = "Choose a country",
         choices = unique(avg_recycle_waste$Country),
         selected = "Austria"
       ),
-      p("Please select a country to see the comparison
-        between recycled waste and the total waste")
+      p("
+        By looking at the comparison,
+        it is clear that only how much waste has been recycled
+        in different country. Please refer to the map to see
+        the effect global warming in the selected country")
     ),
     mainPanel(
       plotlyOutput("percent_recycle")
