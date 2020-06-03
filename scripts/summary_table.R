@@ -2,7 +2,7 @@ library(dplyr)
 library(knitr)
 
 # Create a data frame for the data to work with
-temperature_df <- read.csv("../data/GlobalLandTemperaturesByCountry.csv",
+temperature_df <- read.csv("../final-project-danarin/data/GlobalLandTemperaturesByCountry.csv",
                            stringsAsFactors = FALSE
 )
 

@@ -7,11 +7,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-source("temperature-chart.R")
-source("CAT_data.R")
-source("summary_info.R")
-source("chart_3.R")
-source("summary_table.R")
+source("scripts/temperature-chart.R")
+source("scripts/CAT_data.R")
+source("scripts/summary_info.R")
+source("scripts/chart_3.R")
+source("scripts/summary_table.R")
 ```
 
 ## Introduction

@@ -6,7 +6,7 @@ library(stringr)
 library(plotly)
 
 #Total waste production in from 2004-2016
-waste_data <- read.csv("data/waste_generation_and_treatment(env_wasgt).csv",
+waste_data <- read.csv("../final-project-danarin/data/waste_generation_and_treatment(env_wasgt).csv",
                        header = TRUE, stringsAsFactors = FALSE)
 
 waste_data <- waste_data %>%
