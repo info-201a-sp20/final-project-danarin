@@ -155,6 +155,15 @@ recycle_chart <- tabPanel(
 summary_page <- tabPanel(
   "Summary",
   h1("CONCLUSIONS"),
+  h3("Major takeaway 2: Global Waste Generation"),
+  p("This chart represents the global waste generation of each country of
+    the years given in the data set (1990-2030). Like the other bar chart,
+    each bar represents the average waste. By looking at this bar chart, you
+    are able to compare the difference between the average waste generated between 
+    countries when referring to the numbers above each bar. Of the countries,
+    the United States has contributed the most to waste generation (0.74) and
+    Indonesia has contribued the least (0.05)."),
+  plotlyOutput("plot"),
   h3("Major takeaway 3: Recycled Rate vs Temperature change"),
   p("As this correlation graph has shown, the higher the recycle rate 
     surprsingly resulted in higher temperature change throughout the years

@@ -1,6 +1,7 @@
 library(shiny)
 source("scripts/temperature_map.R")
 source("scripts/CAT_chart.R")
+source("scripts/CAT_data.R")
 source("scripts/recycle_tab_data.R")
 source("scripts/chart_3.R")
 
