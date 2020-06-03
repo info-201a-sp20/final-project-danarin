@@ -238,9 +238,13 @@ about_tab <- tabPanel(
     align = "center", class="about_text"),
   div(class="about_members",
     h3("Jenny Dao"),
+    p("Sophomore, Intended HCDE"),
     h3("Stephanie Nguyen"),
+    p("Junior, Geography"),
     h3("Janet Pan"),
-    h3("Dana Rin")
+    p("Senior, Biochemistry"),
+    h3("Dana Rin"),
+    p("Freshman, Intended Informatics")
   ),
 )
 
