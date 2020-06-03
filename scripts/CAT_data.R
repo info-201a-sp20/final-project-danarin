@@ -23,11 +23,11 @@ updated_df <- cat_df %>%
   )
 
 # Create bar chart to show waste generation by country
-plot <- ggplot(updated_df, mapping = aes(fill = Country, x = Country,
+p <- ggplot(updated_df, mapping = aes(fill = Country, x = Country,
                                       y = Average_Waste_Generation))
-plot <- p + geom_text(aes(label = round(Average_Waste_Generation, digits = 2)),
+p <- p + geom_text(aes(label = round(Average_Waste_Generation, digits = 2)),
                   vjust = -0.5, position = position_dodge(0.9), size = 2.75)
-plot <- p +  geom_bar(position = "stack",
+p <- p +  geom_bar(position = "stack",
                    stat = "identity")
-plot <- p + ggtitle("Average Waste Generation Within Countries")
-plot <- p + ylab("Avg Waste Generation (Per Capita)")
+p <- p + ggtitle("Average Waste Generation Within Countries")
+p <- p + ylab("Avg Waste Generation (Per Capita)")
