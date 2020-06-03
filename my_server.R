@@ -35,6 +35,8 @@ server <- function(input, output, session) {
       )
   })
   
+  output$plot <- renderPlotly(p)
+  
   #Summary page for recycle page
   output$correlation_plot <- renderPlotly({
     correlation_plot
